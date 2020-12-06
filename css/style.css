@@ -464,7 +464,8 @@ margin-left: 30px;
 .social li + li{
   margin-left: 10px;
 }
-.social-list a {
+.social-link {
+  
   width: 44px;
   height: 44px;
 
