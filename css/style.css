@@ -27,6 +27,7 @@ html{
   --contact-color:rgba(255, 255, 255, 0.6);
   --border-bottom-color:#ECECEC;
   --border-card-color:#eeeeee;
+  --icon-fill-color:#afb1b8;
   }
 
 body{
@@ -312,12 +313,9 @@ margin-left: 30px;
   display: flex;
 
 }
-.employees li{
+.employees-item{
   width: 270px;
-  
   background: var(--main-title-color);
-  
-  
   box-shadow: 0px 1px 3px
   rgba(0, 0, 0, 0.12), 
   0px 1px 1px rgba(0, 0, 0, 0.14), 
@@ -366,6 +364,37 @@ margin-left: 30px;
   line-height: 1.2;
   text-align: center;
 }
+.social{
+  display: flex;
+  margin-top: 16px;
+}
+
+.social li + li{
+  margin-left: 10px;
+
+}
+.social-link{
+  width: 44px;
+  height: 44px;
+
+  color: var(--icon-fill-color) ;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.icon-social{
+  fill: currentColor;
+}
+.social-link:hover
+.social-link:focus{
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+.icon-social:hover
+.icon-social:focus{
+  fill: var(--main-title-color);
+}
 /*Постоянные клиенты*/
 .clients{
   display: flex;
@@ -374,23 +403,23 @@ margin-left: 30px;
 margin-left: 30px;
 }
 
-.clients-link a{
-   
+.clients-link {
    width: 170px;
    height: 90px;
    border: 1px solid #AFB1B8;
    box-sizing: border-box;
    border-radius: 4px;
-}
-.clients-link a:hover{
-  border-color: #2196F3;
-}
 
+   color:var(--icon-fill-color);
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+}
 .clients-icon{
-  width: 44px;
-  height:  49px;
-
+  fill: currentColor;
 }
+
+
 
  /*FOOTER*/
 
@@ -460,14 +489,14 @@ margin-left: 30px;
   text-transform: uppercase;
   }
 
-.social{
+.social-footer{
   display: flex;
 }
 
-.social li + li{
+.social-footer li + li{
   margin-left: 10px;
 }
-.social-link {
+.social-link-footer {
   width: 44px;
   height: 44px;
 
@@ -477,11 +506,11 @@ margin-left: 30px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50px;
 }
-.social-icon{
+.social-icon-footer{
   fill: var(--main-title-color);
 }
 
-.social-list a:hover{
+.social-link-footer:hover{
   background-color: var(--accent-color);
 }
 /*ПОРТФОЛИО*/
