@@ -28,6 +28,7 @@ html{
   --border-bottom-color:#ECECEC;
   --border-card-color:#eeeeee;
   --icon-fill-color:#afb1b8;
+  --social-link-footer-background:rgba(255, 255, 255, 0.1);
   }
 
 body{
@@ -232,36 +233,23 @@ margin-left: 50px ;
  width: 270px ;
 }
 
-.advantage-item::before{
-  display: block;  
+.advantage-item{
+  display: flex;  
   content:"" ;
+
   height: 120px;
   margin-bottom: 30px;
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--background-color);
-}
 
-.icon-antenna::before{
-  background-image: url("../images/icon/antenna\ 1.svg");
-  background-size: 70px;
-}
+  justify-content: center;
+  align-items: center;
+ }
 
-.icon-clock::before{
-  background-image: url("../images/icon/clock\ 1.svg");
-  background-size: 70px;
-}
 
-.icin-diagram::before{
-  background-image: url("../images/icon/diagram\ 1.svg");
-  background-size: 70px;
-}
-
-.icon-astronaut::before{
-  background-image: url("../images/icon/astronaut\ 1.svg");
-  background-size: 70px;
-}
 .small-title{
   color: var(--main-text-color);
   margin-top: 0;
@@ -364,6 +352,7 @@ margin-left: 30px;
   line-height: 1.2;
   text-align: center;
 }
+
 .social{
   display: flex;
   margin-top: 16px;
@@ -377,24 +366,25 @@ margin-left: 30px;
   width: 44px;
   height: 44px;
 
-  color: var(--icon-fill-color) ;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
  
 .icon-social{
-  fill: currentColor;
+  fill:var(--icon-fill-color) ;
 }
-.social-link:hover
-.social-link:focus{
-  border-radius: 50%;
-  background-color: var(--accent-color);
-}
+
+.social-link:hover,
+.social-link:focus
 .icon-social:hover
-.icon-social:focus{
-  fill: var(--main-title-color);
+.icon-social:focus  {
+background-color: var(--accent-color);
+
 }
+
+
 /*Постоянные клиенты*/
 .clients{
   display: flex;
@@ -406,17 +396,24 @@ margin-left: 30px;
 .clients-link {
    width: 170px;
    height: 90px;
-   border: 1px solid #AFB1B8;
+   border: 1px solid var(--icon-fill-color);
    box-sizing: border-box;
    border-radius: 4px;
 
-   color:var(--icon-fill-color);
+   color: var(--icon-fill-color);
+
    display: inline-flex;
    justify-content: center;
    align-items: center;
-}
-.clients-icon{
-  fill: currentColor;
+  }
+
+  .clients-link :hover,
+  .clients-link :focus{
+    border-color:var(--accent-color);
+  }
+
+  .clients-icon{
+  fill:currentColor
 }
 
 
@@ -503,7 +500,7 @@ margin-left: 30px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--social-link-footer-background) ;
   border-radius: 50px;
 }
 .social-icon-footer{
